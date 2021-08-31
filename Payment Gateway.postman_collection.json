@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "a045528e-0e51-4d9f-aa3b-3efad4a00eef",
+		"name": "Payment Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Master Data",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\" : \"Adi\",\r\n    \"last_name\" : \"Bagus\",\r\n    \"email\" : \"adibagus123@gmail.com\",\r\n    \"phone_no\" : \"082312341234\",\r\n    \"provinsi_id\" : 11,\r\n    \"kabupaten_id\" : 1171,\r\n    \"kecamatan_id\" : 1171031,\r\n    \"kelurahan_id\" : 1171031005,\r\n    \"address\" : \"Jl. Pahlawan no. 89\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\" : \"Adi\",\r\n    \"last_name\" : \"Bagus\",\r\n    \"email\" : \"adibagus1@gmail.com\",\r\n    \"phone_no\" : \"082312341234\",\r\n    \"provinsi_id\" : 11,\r\n    \"kabupaten_id\" : 1171,\r\n    \"kecamatan_id\" : 1171031,\r\n    \"kelurahan_id\" : 1171031005,\r\n    \"address\" : \"Jl. Pahlawan no. 89\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Produk",
+					"item": [
+						{
+							"name": "Store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama\" : \"Dark Choco Drink Houseblend Can 180 gr\",\r\n    \"harga\" : 65000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/produk",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"produk"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/produk",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"produk"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama\" : \"Dark Chocolate Cookies\",\r\n    \"harga\" : 18000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/produk/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"produk",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/produk/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"produk",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Alamat",
+					"item": [
+						{
+							"name": "List Provinsi",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/list-provinsi",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"list-provinsi"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Kabupaten",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/list-kabupaten/11",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"list-kabupaten",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Kecamatan",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/list-kecamatan/1171",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"list-kecamatan",
+										"1171"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Kelurahan",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/list-kelurahan/1171031",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"list-kelurahan",
+										"1171031"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaksi",
+			"item": [
+				{
+					"name": "Order Status",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": " Basic U0ItTWlkLXNlcnZlci1GVkFYVDFxYk8zbDhJNXk5WnFNNGtOWUU6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.sandbox.midtrans.com/v2/CustOrder-27316/status",
+							"protocol": "https",
+							"host": [
+								"api",
+								"sandbox",
+								"midtrans",
+								"com"
+							],
+							"path": [
+								"v2",
+								"CustOrder-27316",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Snap Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"buyer_id\": 2,\r\n    \"item_details\": [\r\n        { \"id\": 1, \"quantity\": 3},\r\n        { \"id\": 2, \"quantity\": 1}\r\n    ],\r\n    \"shipping_address\": {\r\n        \"first_name\" : \"Adi\",\r\n        \"last_name\" : \"Bagus\",\r\n        \"email\" : \"adibagus1@gmail.com\",\r\n        \"phone\" : \"082312341234\",\r\n        \"provinsi_id\": 11,\r\n        \"kabupaten_id\": 1171,\r\n        \"kecamatan_id\": 1171031,\r\n        \"kelurahan_id\": 1171031005,\r\n        \"address\": \"Jl. Pahlawan no. 89\",\r\n        \"postal_code\": \"23128\",\r\n        \"country_code\": \"IDN\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/scan-token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"scan-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\" : \"CustOrder-19291\",\r\n    \"buyer_id\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/order-status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"order-status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Order by User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/list-order/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"list-order",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
